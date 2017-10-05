@@ -10,8 +10,7 @@
 <body>
 (Design the Website front End)
 <h2>Welcome Iron Grub</h2> 
-
-Check your Order Here: <a style="text-decoration: none;"href="checkOrder?name=${listFood.name}">${listFood.name}</a>
+<br>Check your Order Here: <a style="text-decoration: none;"href="CheckOrder">Check Order Here</a><br>
 
 
 <c:forEach items="${listFood}" var="listFood">

@@ -25,7 +25,7 @@ public class FoodWeb extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//List<Users> listUsers = (List<Users>) getServletContext().getAttribute("listUsers");
+		List<Users> listUsers = (List<Users>) getServletContext().getAttribute("listUsers");
 		List<Food> listFood = (List<Food>) getServletContext().getAttribute("listFood");
 		//List<BoughtFood> listBought = (List<BoughtFood>) getServletContext().getAttribute("listBought");
 		int currentFood = Integer.valueOf( request.getParameter( "id" ) );

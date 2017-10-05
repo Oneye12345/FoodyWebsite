@@ -140,7 +140,7 @@ public class Homepage extends HttpServlet {
 		
 		
 		//---------------------------Testing Database Grabbing------------------------------------------
-		for (int i = 0; i< listFood.size(); i ++) {
+		/*for (int i = 0; i< listFood.size(); i ++) {
 			System.out.println(listFood.get(i).toString());
 		}
 		for (int i = 0; i< listUsers.size(); i ++) {
@@ -148,7 +148,7 @@ public class Homepage extends HttpServlet {
 		}
 		for (int i = 0; i < listBought.size(); i ++) {
 			System.out.println(listBought.get(i).toString());
-		}
+		}*/
 			
 			
 		//----------------------------------------------------------------------------------------------
