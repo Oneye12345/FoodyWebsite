@@ -38,7 +38,7 @@ public class Homepage extends HttpServlet {
 		List<Food> listFood = new ArrayList<Food>();
 		List<Users> listUsers = new ArrayList<Users>();
 		List<BoughtFood> listBought = new ArrayList<BoughtFood>();
-		
+		List<servingSize> listServing = new ArrayList<servingSize>();
 		
 		//-------------------------------------ListFood------------------------------------
 		try {
@@ -58,7 +58,7 @@ public class Homepage extends HttpServlet {
 
 			while (rs.next()) {
 				listFood.add(new Food(rs.getInt("Id"), rs.getString("Name"), rs.getString("Image"), rs.getString("Description"),
-						rs.getDouble("price")));
+						rs.getDouble("price"), rs.getBoolean("isSize")));
 			}
 
 			c.close();
@@ -141,6 +141,39 @@ public class Homepage extends HttpServlet {
 		}
 		
 		
+		//--------------------------ListServings---------------------------
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			throw new ServletException(e);
+		}
+
+		Connection c3 = null;
+		try {
+			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu05";
+			String username = "cs3337stu05";
+			String password = "Q2qg8x!l";
+			c3 = DriverManager.getConnection(url, username, password);
+			Statement stmt = c3.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * from servingSize;");
+
+			while (rs.next()) {
+				listServing.add(new servingSize(rs.getInt("Id"), rs.getString("name"), rs.getString("size"), rs.getDouble("carlories"), rs.getDouble("protein"), rs.getDouble("carbs"), rs.getDouble("fat")));
+			}
+
+			c3.close();
+		} catch (SQLException e) {
+			throw new ServletException(e);
+		} finally {
+			try {
+				if (c3 != null)
+					c3.close();
+			} catch (SQLException e) {
+				throw new ServletException(e);
+			}
+		}
+		
+		
 		//---------------------------Testing Database Grabbing------------------------------------------
 		/*for (int i = 0; i< listFood.size(); i ++) {
 			System.out.println(listFood.get(i).toString());
@@ -155,7 +188,7 @@ public class Homepage extends HttpServlet {
 			
 		//----------------------------------------------------------------------------------------------
 			
-		
+		getServletContext().setAttribute("listServing", listServing);
 		getServletContext().setAttribute("listFood", listFood);
 		getServletContext().setAttribute("listUsers", listUsers);
 		getServletContext().setAttribute("listBought", listBought);

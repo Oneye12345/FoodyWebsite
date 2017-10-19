@@ -32,7 +32,7 @@ public class FoodWeb extends HttpServlet {
 		Food pickFood = null;
 		for (int i = 0; i < listFood.size(); i++) {
 			if (listFood.get(i).getId()== currentFood){
-				pickFood = new Food(listFood.get(i).getId(), listFood.get(i).getName(), listFood.get(i).getImage(), listFood.get(i).getDescription(), listFood.get(i).getPrice());
+				pickFood = new Food(listFood.get(i).getId(), listFood.get(i).getName(), listFood.get(i).getImage(), listFood.get(i).getDescription(), listFood.get(i).getPrice(), listFood.get(i).isSize());
 			}
 		}
 		

@@ -5,15 +5,23 @@ public class Food {
 	String Image;
 	String Description;
 	double Price;
-	public Food( int Id, String name,String Image, String Description,double Price) {
+	boolean isSize;
+	public Food( int Id, String name,String Image, String Description,double Price, boolean isSize) {
 		this.Id = Id;
 		this.Name = name;
 		this.Image = Image;
 		this.Description = Description;
 		this.Price = Price;
+		this.isSize = isSize;
 	}
 	public double getPrice() {
 		return Price;
+	}
+	public boolean isSize() {
+		return isSize;
+	}
+	public void setSize(boolean isSize) {
+		this.isSize = isSize;
 	}
 	public void setPrice(double price) {
 		Price = price;
