@@ -12,25 +12,9 @@
 	<br> ${pickFood.description}
 	<br> ${pickFood.price}
 	<br> OTHER Options:
-	<c:choose>
-		<c:when test="${pickFood.isSize == true}">
-			<form action='FoodWeb' method='post'>
-				<input type="radio" name="Size" value="0"> Small +$0<br>
-				<input type="radio" name="Size" value="2"> Large +2$ <input
-					type='submit'>
-			</form>
-			<br />
-		</c:when>
-		<c:otherwise>
-			<form action='FoodWeb' method='post'>
-				<input type="radio" name="Size" value="0"> Small +$0<br>
-				type='submit'>
-			</form>
-			<br />
-		</c:otherwise>
-	</c:choose>
+	
+	 
 
-	</test>
 
 
 

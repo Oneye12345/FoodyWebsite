@@ -158,7 +158,7 @@ public class Homepage extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("SELECT * from servingSize;");
 
 			while (rs.next()) {
-				listServing.add(new servingSize(rs.getInt("Id"), rs.getString("name"), rs.getString("size"), rs.getDouble("carlories"), rs.getDouble("protein"), rs.getDouble("carbs"), rs.getDouble("fat")));
+				listServing.add(new servingSize(rs.getInt("Id"), rs.getString("name"), rs.getString("size"), rs.getDouble("calories"), rs.getDouble("protein"), rs.getDouble("carbs"), rs.getDouble("fat")));
 			}
 
 			c3.close();
