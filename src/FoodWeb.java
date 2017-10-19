@@ -36,8 +36,10 @@ public class FoodWeb extends HttpServlet {
 			}
 		}
 		
-		System.out.println(pickFood.getName());
+		System.out.println(pickFood.isSize());
+		
 		getServletContext().setAttribute("pickFood", pickFood);
+		
 		request.getRequestDispatcher("/WEB-INF/FoodWeb.jsp").forward(request, response);
 	}
 
