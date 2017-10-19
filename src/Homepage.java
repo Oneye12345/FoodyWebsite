@@ -39,6 +39,7 @@ public class Homepage extends HttpServlet {
 		List<Users> listUsers = new ArrayList<Users>();
 		List<BoughtFood> listBought = new ArrayList<BoughtFood>();
 		
+		
 		//-------------------------------------ListFood------------------------------------
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -56,7 +57,8 @@ public class Homepage extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("SELECT * from Food;");
 
 			while (rs.next()) {
-				listFood.add(new Food(rs.getInt("Id"), rs.getString("Name"), rs.getString("Image"), rs.getString("Description"), rs.getString("price")));
+				listFood.add(new Food(rs.getInt("Id"), rs.getString("Name"), rs.getString("Image"), rs.getString("Description"),
+						rs.getDouble("price")));
 			}
 
 			c.close();

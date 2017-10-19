@@ -19,4 +19,8 @@ public int getAmount() {
 public void setAmount(int amount) {
 	this.amount = amount;
 }
+public String toString() {
+	String output = foods.toString() + amount;
+	return output;
+}
 }

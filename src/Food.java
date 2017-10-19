@@ -1,21 +1,21 @@
-
+//DONE
 public class Food {
 	int Id;
 	String Name;
 	String Image;
 	String Description;
-	String Price;
-	public Food( int Id, String name,String Image, String Description,String Price) {
+	double Price;
+	public Food( int Id, String name,String Image, String Description,double Price) {
 		this.Id = Id;
 		this.Name = name;
 		this.Image = Image;
 		this.Description = Description;
 		this.Price = Price;
 	}
-	public String getPrice() {
+	public double getPrice() {
 		return Price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		Price = price;
 	}
 	public String getImage() {

@@ -11,5 +11,17 @@
 	${pickFood.name}<br>
 	${pickFood.description}<br>
 	${pickFood.price}<br>
+	
+	
+	OTHER Options:
+	
+	<form action='FoodWeb' method = 'post'>
+  <input type="radio" name="Size" value="0"> Small +$0<br>
+  <input type="radio" name="Size" value="1"> Medium +$1<br>
+  <input type="radio" name="Size" value="2"> Large +2$
+  <input type='submit'>
+</form>
+	
+	
 </body>
 </html>

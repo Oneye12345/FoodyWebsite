@@ -42,7 +42,7 @@ public class CheckResult extends HttpServlet {
 		int food5 = 0;
 		int food6 = 0;
 		
-		//DONE ------------------------FIND USER ID FOR ORDER-------------------
+		//Debug DONE ------------------------FIND USER ID FOR ORDER-------------------
 		System.out.println("Checking Order for : " + UserOrdered);
 		int UserOrderedId=0;
 		for (int i = 0; i < listUsers.size(); i++) {
@@ -51,7 +51,7 @@ public class CheckResult extends HttpServlet {
 			}
 		}
 		
-		//DONE ------------------------FIND USER User Ordered Dish ID!-------------------
+		//Debug DONE ------------------------FIND USER User Ordered Dish ID!-------------------
 	
 		for (int i = 0; i < listBought.size(); i ++ ) {
 			
@@ -62,7 +62,7 @@ public class CheckResult extends HttpServlet {
 		}
 		
 		
-		//DONE----------------------FIND AMOUNT DUPLICATE----------------
+		//Debug DONE----------------------FIND AMOUNT DUPLICATE----------------
 		for (int i = 0; i < BfoodId.size(); i++) {
 			System.out.println(BfoodId.get(i));
 			if (BfoodId.get(i) == 1) {
@@ -87,7 +87,9 @@ public class CheckResult extends HttpServlet {
 		
 		
 		
-		//---------------------FIND Layable----------------------
+		
+		
+		//Debug Done---------------------FIND Layable----------------------
 		Set<Integer> nonDuplBfood = new HashSet<>();
 		nonDuplBfood.addAll(BfoodId);
 		BfoodId.clear();
@@ -95,58 +97,22 @@ public class CheckResult extends HttpServlet {
 		System.out.println("BfoodSize: " + BfoodId.size());
 		System.out.println("listFood: " + listFood.size());
 		
+		for ( int i = 0; i < BfoodId.size(); i ++) {
+			System.out.println(BfoodId.get(i));
+		}
 		
-		if (BfoodId.size()< listFood.size()) {
-			for (int i = 0; i < BfoodId.size(); i ++) {
-				//System.out.println("added BfoodId" + BfoodId.get(i));
-				for ( int j = 0; j < listFood.size(); j ++) {
-					if (BfoodId.get(i) == listFood.get(j).getId()) {
-						int id = listFood.get(j).getId();
-						if (id == 1) {
-							listBFood.add(new BFood(listFood.get(i), food1));
-						}else if (id == 2) {
-							listBFood.add(new BFood(listFood.get(i), food2));
-						}else if (id == 3) {
-							listBFood.add(new BFood(listFood.get(i), food3));
-						}else if (id == 4) {
-							listBFood.add(new BFood(listFood.get(i), food4));
-						}else if (id == 5) {
-							listBFood.add(new BFood(listFood.get(i), food5));
-						}else if (id == 6) {
-							listBFood.add(new BFood(listFood.get(i), food6));
-						}
-						
-						
-						//System.out.println("User has bought : " + listFood.get(i).getName());
-					}
-				}
-			}
-		}else {
-			for (int i = 0; i < listFood.size(); i ++) {
-				//System.out.println("added BfoodId" + BfoodId.get(i));
-				for ( int j = 0; j < BfoodId.size(); j ++) {
-					if (BfoodId.get(i) == listFood.get(j).getId()) {
-						int id = listFood.get(j).getId();
-						if (id == 1) {
-							listBFood.add(new BFood(listFood.get(i), food1));
-						}else if (id == 2) {
-							listBFood.add(new BFood(listFood.get(i), food2));
-						}else if (id == 3) {
-							listBFood.add(new BFood(listFood.get(i), food3));
-						}else if (id == 4) {
-							listBFood.add(new BFood(listFood.get(i), food4));
-						}else if (id == 5) {
-							listBFood.add(new BFood(listFood.get(i), food5));
-						}else if (id == 6) {
-							listBFood.add(new BFood(listFood.get(i), food6));
-						}
-						//System.out.println("User has bought : " + listFood.get(i).getName());
-					}
-				}
+		for (int i = 0; i < listFood.size(); i++) {
+			System.out.println("checking image" + listFood.get(i).getImage());
+		}
+		
+		
+		//FIX IMAGE------------------FILL Bought Food List----------------------
+		
+		for (int i = 0; i < BfoodId.size(); i ++) {
+			for ( int j = 0; i < listFood.size(); i++) {
+				
 			}
 		}
-		 
-		
 		
 		
 
