@@ -27,8 +27,7 @@ public class CheckOrder extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		request.getRequestDispatcher("/WEB-INF/CheckOrder.jsp").forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -36,10 +35,7 @@ public class CheckOrder extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String UserOrdered = request.getParameter( "username" );
-	
-		getServletContext().setAttribute("UserOrdered", UserOrdered);
-		response.sendRedirect("CheckResult");
+		doGet(request, response);
 	}
 
 }

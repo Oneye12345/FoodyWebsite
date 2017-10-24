@@ -1,29 +1,21 @@
-//DONE
+
 public class Food {
 	int Id;
 	String Name;
 	String Image;
 	String Description;
-	double Price;
-	boolean isSize;
-	public Food( int Id, String name,String Image, String Description,double Price, boolean isSize) {
+	String Price;
+	public Food( int Id, String name,String Image, String Description,String Price) {
 		this.Id = Id;
 		this.Name = name;
 		this.Image = Image;
 		this.Description = Description;
 		this.Price = Price;
-		this.isSize = isSize;
 	}
-	public double getPrice() {
+	public String getPrice() {
 		return Price;
 	}
-	public boolean isSize() {
-		return isSize;
-	}
-	public void setSize(boolean isSize) {
-		this.isSize = isSize;
-	}
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		Price = price;
 	}
 	public String getImage() {
