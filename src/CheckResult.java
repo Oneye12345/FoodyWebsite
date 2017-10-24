@@ -33,19 +33,16 @@ public class CheckResult extends HttpServlet {
 		List<Users> listUsers = (List<Users>) getServletContext().getAttribute("listUsers");
 		List<Food> listFood = (List<Food>) getServletContext().getAttribute("listFood");
 		String UserOrdered = (String) getServletContext().getAttribute("UserOrdered");
-		List<BFood> listBFood = new ArrayList<BFood>();
-		int id=0;
-		int buyerId=0;
+	
 		//System.out.println(str);
 		for(int i=0;i<listUsers.size();i++) {
 			if(listUsers.get(i).getName().equals(UserOrdered)) {
 				for(int j=0;j<listBought.size();j++) {
 					if(listBought.get(j).getBuyerId()==listUsers.get(i).getId()) {
-						System.out.println("BuyerId:"+listBought.get(j).getId());
+						System.out.println("BoughtFood ID:"+listBought.get(j).getId());
 					}
 
 				}
-
 
 
 			}//End of second for loop
