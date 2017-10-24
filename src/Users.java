@@ -3,7 +3,7 @@ public class Users {
 	int Id;
 	String Name;
 	
-	public Users(int Id, String Name){
+	public Users(int Id, String Name){	
 		this.Id= Id;
 		this.Name = Name;
 			

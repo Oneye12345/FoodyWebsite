@@ -158,7 +158,7 @@ public class Homepage extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("SELECT * from servingSize;");
 
 			while (rs.next()) {
-				listServing.add(new servingSize(rs.getInt("Id"), rs.getString("name"), rs.getString("size"), rs.getDouble("calories"), rs.getDouble("protein"), rs.getDouble("carbs"), rs.getDouble("fat")));
+				listServing.add(new servingSize(rs.getInt("Id"), rs.getString("name"), rs.getString("size"), rs.getDouble("calories"), rs.getDouble("protein"), rs.getDouble("carbs"), rs.getDouble("fat"),rs.getInt("pickFoodId")));
 			}
 
 			c3.close();
@@ -178,6 +178,7 @@ public class Homepage extends HttpServlet {
 		/*for (int i = 0; i< listFood.size(); i ++) {
 			System.out.println(listFood.get(i).toString());
 		}
+		
 		for (int i = 0; i< listUsers.size(); i ++) {
 			System.out.println(listUsers.get(i).toString());
 		}

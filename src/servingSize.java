@@ -7,7 +7,8 @@ public class servingSize {
     double protein;
     double fat;
     double carbs;
-    public servingSize(int Id, String foodName, String size, double calories, double protein, double fat, double carbs) {
+    int pickFoodId;
+    public servingSize(int Id, String foodName, String size, double calories, double protein, double fat, double carbs, int pickFoodId) {
     	this.Id = Id;
     	this.foodName = foodName;
     	this.size = size;
@@ -15,7 +16,14 @@ public class servingSize {
     	this.protein = protein;
     	this.fat = fat;
     	this.carbs = carbs;
+    	this.pickFoodId = pickFoodId;
     }
+	public int getPickFoodId() {
+		return pickFoodId;
+	}
+	public void setPickFoodId(int pickFoodId) {
+		this.pickFoodId = pickFoodId;
+	}
 	public int getId() {
 		return Id;
 	}
@@ -58,6 +66,8 @@ public class servingSize {
 	public void setCarbs(double carbs) {
 		this.carbs = carbs;
 	}
-    
+    public String toString() {
+    	return  foodName + " " + calories ;
+    }
    
 }
