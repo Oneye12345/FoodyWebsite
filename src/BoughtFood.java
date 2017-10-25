@@ -23,4 +23,3 @@ public class BoughtFood {
 		return output;
 	}
 }
-
