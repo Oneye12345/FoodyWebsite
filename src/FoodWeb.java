@@ -64,6 +64,7 @@ public class FoodWeb extends HttpServlet {
 		
 		
 		double tPrice = FoodSize + pickFood.getPrice();
+		
 		System.out.println("Size picked : " +tPrice);
 		getServletContext().setAttribute("FoodSize", FoodSize);
 	}

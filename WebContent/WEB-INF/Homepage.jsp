@@ -5,15 +5,15 @@
 <html>
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
-<link rel="stylesheet" href="app.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Iron Grub</title>
 </head>
 <body>
 <div class="topnav">
-  <a class="active" href="Homepage">Home</a>
+ 
+  <a class="active" href="Homepage"><span>IRON GRUB</span>Home</a>
   <a href="CheckOrder">CheckOrder</a>
-  
+  <a href="Introduction">About Us</a>
 
 </div>
 

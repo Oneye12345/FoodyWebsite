@@ -2,13 +2,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style>
+<%@
+include
+ 
+file
+="/WEB-INF/index
+.css
+"%
+>
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>${pickFood.name}</title>
 </head>
 
 <body>
+	<div class="topnav">
 
-	${pickFood.image}
+		<a class="active" href="Homepage"><span>IRON GRUB</span>Home</a> <a
+			href="CheckOrder">CheckOrder</a> <a href="Introduction">About Us</a>
+	</div>
+
+	<br>
+	<br>
+	<br> ${pickFood.image}
 	<br> ${pickFood.name}
 	<br> ${pickFood.description}
 	<br> ${pickFood.price}
@@ -39,7 +56,7 @@
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
-				 <input type='submit' value='Check Out'>
+				<input type='submit' value='Check Out'>
 			</form>
 			<br />
 		</c:when>

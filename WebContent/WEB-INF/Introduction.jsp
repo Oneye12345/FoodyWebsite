@@ -21,7 +21,7 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("img_parallax.jpg");
+  background-image: url("https://static.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg");
   min-height: 100%;
 }
 
@@ -71,7 +71,7 @@ h3 {
 
 <div class="bgimg-1">
   <div class="caption">
-    <span class="border">SCROLL DOWN</span>
+    <span class="border">Iron Grub</span>
   </div>
 </div>
 
@@ -106,7 +106,7 @@ h3 {
 
 <div class="bgimg-1">
   <div class="caption">
-    <span class="border">COOL!</span>
+    <span class="border"><a href = "Homepage">GO TO WEBSITE</a></span>
   </div>
 </div>
 
