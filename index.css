@@ -38,18 +38,27 @@ table {
 	width: 100%;
 }
 
-th, td {
+.th, td {
 	border: 0;
 	padding: 0;
 	text-align: center;
 }
 
-.img {
-	width: 180px;
-	height: 180px;
-	border: 1px solid #fff;
-	box-shadow: 5px 5px 3px #ccc;
-	-moz-box-shadow: 5px 5px 3px #ccc;
-	-webkit-box-shadow: 5px 5px 3px #ccc;
-	-khtml-box-shadow: 5px 5px 3px #ccc;
+.background{
+	background-image:url("https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1447272617000/photosp/b3c29071-529d-4884-8fca-4cc1e3f7b635/stock-photo-bacon-crispy-bacon-bacon-plate-baked-bacon-b3c29071-529d-4884-8fca-4cc1e3f7b635.jpg");
+	min-height:400px;
+	opacity: 0.65;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+th,td{
+	background-color:blue;
+	color:white;
+	border:1px solid black;
+	width:1%;
+}
+h4{
+	text-color:black;
 }
