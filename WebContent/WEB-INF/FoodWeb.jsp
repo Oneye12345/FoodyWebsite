@@ -2,30 +2,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<style>
-<%@
-include
- 
-file
-="/WEB-INF/index
-.css
-"%
->
-</style>
+<style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>${pickFood.name}</title>
 </head>
 
 <body>
-	<div class="topnav">
+<div class="topnav">
+ 
+  <a class="active" href="Homepage"><span>IRON GRUB</span>Home</a>
+  <a href="Introduction">About Us</a>
+</div>
 
-		<a class="active" href="Homepage"><span>IRON GRUB</span>Home</a> <a
-			href="CheckOrder">CheckOrder</a> <a href="Introduction">About Us</a>
-	</div>
-
-	<br>
-	<br>
-	<br> ${pickFood.image}
+	
+	${pickFood.image}
 	<br> ${pickFood.name}
 	<br> ${pickFood.description}
 	<br> ${pickFood.price}
@@ -33,12 +23,11 @@ file
 
 	<c:choose>
 		<c:when test="${pickFood.size}">
-			<form action='FoodWeb' method='post'>
+			<form action='CheckOut' method='get'>
 				<c:forEach items="${pickServings}" var="serving">
 					<c:choose>
 						<c:when test="${serving.size=='large'}">
-
-
+						    
 							<div>
 								Calories = ${serving.calories} | | Protein: ${serving.protein} |
 								| Carbs: ${serving.carbs} | | Fat : ${serving.fat} | | Size:
@@ -56,12 +45,12 @@ file
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
-				<input type='submit' value='Check Out'>
+				 <input type='submit' value='Check Out'>
 			</form>
 			<br />
 		</c:when>
 		<c:otherwise>
-			<form action='FoodWeb' method='post'>
+			<form action='CheckOut' method='get'>
 				<c:forEach items="${pickServings}" var="serving">
 					<div>
 						Calories = ${serving.calories} | | Protein: ${serving.protein} | |

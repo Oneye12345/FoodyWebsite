@@ -58,15 +58,4 @@ public class FoodWeb extends HttpServlet {
 	}
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Food pickFood = (Food) (getServletContext().getAttribute("pickFood"));
-		double FoodSize = Double.valueOf( request.getParameter( "Size" ) ); 
-		
-		
-		double tPrice = FoodSize + pickFood.getPrice();
-		
-		System.out.println("Size picked : " +tPrice);
-		getServletContext().setAttribute("FoodSize", FoodSize);
-	}
-
 }

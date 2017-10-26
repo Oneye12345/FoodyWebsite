@@ -125,7 +125,7 @@ public class Homepage extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("SELECT * from boughtFood;");
 
 			while (rs.next()) {
-				listBought.add(new BoughtFood(rs.getInt("Id"), rs.getInt("userId")));
+				listBought.add(new BoughtFood(rs.getInt("Id"), rs.getInt("userId"), rs.getBoolean("isNormal")));
 			}
 
 			c2.close();
