@@ -28,8 +28,13 @@ You are Ordering : ${pickFood.name} <br>
 <form action="CheckOut" method="post">
 	Address:
 	<input type="text" name="Address"> <br>
-	Payment information: 
-	<input type="text" name="CreditCard"><br>
+	Payment information: <br>
+	Credit Card Number:
+	<input type="text" name="CreditCardNumber"><br>
+	Security Code:
+	<input type="text" name="CardSecurityCode"><br>
+	Name (First name):
+	<input type="text" name="fName"><br>
 	
 	<input type="submit" value="Confirm Order">
 

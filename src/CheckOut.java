@@ -42,6 +42,10 @@ public class CheckOut extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		Food pickFood = (Food) (getServletContext().getAttribute("pickFood"));
+		double FoodSize = Double.valueOf( request.getParameter( "Size" ) ); 
+		
+		
 		doGet(request, response);
 	}
 
