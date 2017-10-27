@@ -1,6 +1,9 @@
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,11 +30,13 @@ public class CheckOut extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		Food pickFood = (Food) (getServletContext().getAttribute("pickFood"));
 		double FoodSize = Double.valueOf( request.getParameter( "Size" ) ); 
 		double tPrice = FoodSize + pickFood.getPrice();
 		System.out.println("Size picked : " +tPrice);
 		getServletContext().setAttribute("tPrice", tPrice);
+		
 		getServletContext().setAttribute("pickFood", pickFood);
 		getServletContext().setAttribute("FoodSize", FoodSize);
 		request.getRequestDispatcher("/WEB-INF/CheckOut.jsp").forward(request, response);

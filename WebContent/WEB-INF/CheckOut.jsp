@@ -33,8 +33,8 @@
 
 
 			<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
+				<div class="img"><a href="FoodWeb?id=${pickFood.id}"> <img src="${pickFood.image}" width = "180" height = "180"></a></div><br>
 				<label class="control-lable"> You are Ordering : ${pickFood.name} </label><br> 
-				<label class="control-lable">${pickFood.image}</label> <br> 
 				<label class="control-lable"> <c:if test="${FoodSize == 2}">Large Size ${tPrice}</c:if></label>
 				<label class="control-lable"> <c:if test="${FoodSize == 0}">Regular Size ${tPrice}</c:if></label>
 

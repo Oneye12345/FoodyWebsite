@@ -24,7 +24,7 @@
       <tr>
     </c:if>
     <td><center><div class="img"><a href="FoodWeb?id=${listFood.id}"> <img src="${listFood.image}" width = "180" height = "180"></a></div><br>
-    			<a style="text-decoration: none; color: #696969"; href="FoodWeb?id=${listFood.id}">${listFood.name}</a> 
+    			<a style="text-decoration: none color= 696969"; href="FoodWeb?id=${listFood.id}">${listFood.name}</a> 
     			<br><font color="green">$${listFood.price}</font>
     			<br><a href="FoodWeb?id=${listFood.id}"><button type="button">Buy Now</button></a></center><br></td>
     <c:if test="${rowCounter.count % 4 == 0}">
