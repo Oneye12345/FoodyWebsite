@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class CheckOut
+ * Servlet implementation class UploadFoodData
  */
-@WebServlet("/CheckOut")
-public class CheckOut extends HttpServlet {
+@WebServlet("/UploadFoodData")
+public class UploadFoodData extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CheckOut() {
+    public UploadFoodData() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,14 +27,7 @@ public class CheckOut extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Food pickFood = (Food) (getServletContext().getAttribute("pickFood"));
-		double FoodSize = Double.valueOf( request.getParameter( "Size" ) ); 
-		double tPrice = FoodSize + pickFood.getPrice();
-		System.out.println("Size picked : " +tPrice);
-		getServletContext().setAttribute("tPrice", tPrice);
-		getServletContext().setAttribute("pickFood", pickFood);
-		getServletContext().setAttribute("FoodSize", FoodSize);
-		request.getRequestDispatcher("/WEB-INF/CheckOut.jsp").forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -42,10 +35,6 @@ public class CheckOut extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Food pickFood = (Food) (getServletContext().getAttribute("pickFood"));
-		double FoodSize = Double.valueOf( request.getParameter( "Size" ) ); 
-		
-		
 		doGet(request, response);
 	}
 
