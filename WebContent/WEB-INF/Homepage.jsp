@@ -6,17 +6,20 @@
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Iron Grub</title>
+<title>Iron Grub | Clean, Fast, Easy.</title>
 </head>
 <body>
 <div class="topnav">
-  <a class="active" href="Homepage"><span>IRON GRUB</span>Home</a>
-  <a href="CheckOrder">CheckOrder</a>
-  <a href="Introduction">About Us</a>
-
+ <a href="Introduction">ABOUT US</a>
+  <a href="CheckOrder">MY ORDER</a>
+  <a href="Homepage">SHOP</a>
 </div>
 
-<h2>Welcome to Iron Grub</h2> 
+<img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '130' height='120'>
+<h1>SHOP</h1>
+<br>
+<br>
+<h3>Iron Grub</h3> 
 
 <table border="0">
   <c:forEach items="${listFood}" var="listFood" varStatus="rowCounter">

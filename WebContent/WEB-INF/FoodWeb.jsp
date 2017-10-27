@@ -20,28 +20,27 @@
 	<br> ${pickFood.description}
 	<br> ${pickFood.price}
 	<br> OTHER Options:
-
+ 
 	<c:choose>
 		<c:when test="${pickFood.size}">
 			<form action='CheckOut' method='get'>
 				<c:forEach items="${pickServings}" var="serving">
 					<c:choose>
-						<c:when test="${serving.size=='large'}">
+						<c:when test="${serving.size =='large'}">
 						    
-							<div>
+							
 								Calories = ${serving.calories} | | Protein: ${serving.protein} |
 								| Carbs: ${serving.carbs} | | Fat : ${serving.fat} | | Size:
-								Large +$2 <input type="radio" name="Size" value="2"
-									checked="checked">
-							</div>
+								Large +$2 <input type="radio" name="Size" value="2" checked="checked">
+							<br>
 
 						</c:when>
 						<c:otherwise>
-							<div>
+							
 								Calories = ${serving.calories} | | Protein: ${serving.protein} |
 								| Carbs: ${serving.carbs} | | Fat : ${serving.fat} | | Size:
 								Normal +$0 <input type="radio" name="Size" value="0">
-							</div>
+						
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>

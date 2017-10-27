@@ -15,9 +15,9 @@
   <a href="Introduction">About Us</a>
 </div>
 <form action = 'CheckOrder' method = 'post'>
-UserName : <input type='text' name='username' ><br>
+First Name : <input type='text' name='username' ><br>
 
-<input type='submit' value='Check'>
+<input type='submit' value='Check Orders'>
 </form>
 
 </body>

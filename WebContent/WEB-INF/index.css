@@ -46,6 +46,15 @@ h3 {
   font: 20px "Lato", sans-serif;
   color: #111;
 }
+
+h1 {
+	  letter-spacing: 5px;
+  text-transform: uppercase;
+  font:"Lato", sans-serif;
+  color: #D2691E;
+	
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3, {
@@ -62,29 +71,34 @@ body {
 .topnav {
 	overflow: hidden;
 	background-color: #333;
-	position: fixed;
 	top: 0;
 	width: 100%;
 }
 
 .topnav a {
-	float: left;
+	float: right;
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 12px;
 }
 
 .topnav a:hover {
-	background-color: #ddd;
-	color: black;
+	background-color: #474747;
+	color: white
 }
 
 .topnav a.active {
-	background-color: #4CAF50;
+	background-color: #333;
 	color: white;
+}
+
+.logo-img {
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
 }
 
 body {
