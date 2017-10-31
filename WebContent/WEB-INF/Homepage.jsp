@@ -6,17 +6,24 @@
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Iron Grub</title>
+<title>Iron Grub | Clean, Fast, Easy.</title>
 </head>
 <body>
 <div class="topnav">
-  <a class="active" href="Homepage"><span>IRON GRUB</span>Home</a>
-  <a href="CheckOrder">CheckOrder</a>
-  <a href="Introduction">About Us</a>
-
+ <a href="Introduction">ABOUT US</a>
+  <a href="CheckOrder">MY ORDER</a>
+  <a href="Homepage">SHOP</a>
 </div>
 
-<h2>Welcome to Iron Grub</h2> 
+
+
+<img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '130' height='120'>
+<div class="container">
+<h1>SHOP</h1>
+<br>
+<br>
+<h3>Iron Grub</h3> 
+</div>
 
 <table border="0">
   <c:forEach items="${listFood}" var="listFood" varStatus="rowCounter">
@@ -24,15 +31,15 @@
       <tr>
     </c:if>
     <td><center><div class="img"><a href="FoodWeb?id=${listFood.id}"> <img src="${listFood.image}" width = "180" height = "180"></a></div><br>
-    			<a style="text-decoration: none color= 696969"; href="FoodWeb?id=${listFood.id}">${listFood.name}</a> 
+    			<a style="text-decoration: none; color: #696969"; href="FoodWeb?id=${listFood.id}">${listFood.name}</a> 
     			<br><font color="green">$${listFood.price}</font>
     			<br><a href="FoodWeb?id=${listFood.id}"><button type="button">Buy Now</button></a></center><br></td>
     <c:if test="${rowCounter.count % 4 == 0}">
-      </th>
+      </tr>
     </c:if>
   </c:forEach >
 </table>
 
 </body>
-<p>&copy; 2017 Iron Grub Inc., All Rights Reserved</p>
+<div class= "text-center">&copy; 2017 Iron Grub Inc., All Rights Reserved</div>
 </html>

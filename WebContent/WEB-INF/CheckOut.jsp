@@ -7,7 +7,8 @@
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="https://bootswatch.com/sandstone/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="https://bootswatch.com/sandstones/bootstrap.min.css"
+	rel="stylesheet" type="text/css" />
 
 <title>CheckOut</title>
 </head>
@@ -42,6 +43,9 @@
 			<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
 				<form action="CheckOut" method="post">
 					<div class=form-group>
+					  	<c:if test = "${isEmptyAlert==false}">
+  					    <h5><font color="red">Please fill out all information.</font></h5>
+   					    </c:if>
 						<label class="control-lable"> Address:</label> 
 						<input class="form-control" type="text" name="Address"> <br>
 						<label class="control-lable"> Payment information: </label>
@@ -58,7 +62,7 @@
 			</div>
 		</div>
 	</div>
-
+  
 
 </body>
 </html>
