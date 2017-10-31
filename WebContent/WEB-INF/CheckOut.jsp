@@ -7,8 +7,7 @@
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="https://bootswatch.com/cyborg/bootstrap.min.css"
-	rel="stylesheet" type="text/css" />
+<link href="https://bootswatch.com/cyborg/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 <title>CheckOut</title>
 </head>

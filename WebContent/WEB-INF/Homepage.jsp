@@ -28,7 +28,7 @@
     			<br><font color="green">$${listFood.price}</font>
     			<br><a href="FoodWeb?id=${listFood.id}"><button type="button">Buy Now</button></a></center><br></td>
     <c:if test="${rowCounter.count % 4 == 0}">
-      </tr>
+      </th>
     </c:if>
   </c:forEach >
 </table>
