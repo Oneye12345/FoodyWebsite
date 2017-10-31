@@ -7,6 +7,7 @@
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Iron Grub | Clean, Fast, Easy.</title>
+<link rel="icon" href="https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg" type="image/gif" sizes="16x16">
 </head>
 <body>
 <div class="topnav">

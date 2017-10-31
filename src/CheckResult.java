@@ -33,12 +33,13 @@ public class CheckResult extends HttpServlet {
 		List<Users> listUsers = (List<Users>) getServletContext().getAttribute("listUsers");
 		List<Food> listFood = (List<Food>) getServletContext().getAttribute("listFood");
 		String UserOrdered = (String) getServletContext().getAttribute("UserOrdered");
-	
+	    List<Integer> boughtFoodId = new ArrayList<Integer>();
 		//System.out.println(str);
 		for(int i=0;i<listUsers.size();i++) {
 			if(listUsers.get(i).getName().equals(UserOrdered)) {
 				for(int j=0;j<listBought.size();j++) {
 					if(listBought.get(j).getBuyerId()==listUsers.get(i).getId()) {
+						boughtFoodId.add(listBought.get(j).getId());
 						System.out.println("BoughtFood ID:"+listBought.get(j).getId());
 					}
 
@@ -47,6 +48,7 @@ public class CheckResult extends HttpServlet {
 
 			}//End of second for loop
 		}//End of first for loop
+		getServletContext().setAttribute("boughtFoodId", boughtFoodId);
 		request.getRequestDispatcher("/WEB-INF/CheckResult.jsp").forward(request, response);
 	}
 
