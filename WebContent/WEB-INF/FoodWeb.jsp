@@ -4,12 +4,14 @@
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="https://bootswatch.com/cyborg/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://bootswatch.com/sandstone/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <title>${pickFood.name}</title>
 </head>
 
 <body>
+
 	<div class="topnav">
+
 
 		<a class="active" href="Homepage"><span>IRON GRUB</span>Home</a> <a
 			href="Introduction">About Us</a>

@@ -110,3 +110,7 @@ th, td {
 	-webkit-box-shadow: 5px 5px 3px #ccc;
 	-khtml-box-shadow: 5px 5px 3px #ccc;
 }
+.container {
+		padding: 25px;
+	
+}
