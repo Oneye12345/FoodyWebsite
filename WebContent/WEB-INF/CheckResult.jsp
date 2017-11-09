@@ -10,9 +10,9 @@
 	
 	You Have Order: <br>
 	<c:forEach items="${listFood}" var="food" varStatus="rowStatus">
-        <c:forEach items="${boughtFoodId}" var="foodId" varStatus="rowCount">
-           <c:if test = "${food.id == foodId}">
-           ${food.name} <br>
+        <c:forEach items="${listBFood}" var="foodId" varStatus="rowCount">
+           <c:if test = "${food.id == foodId.id}">
+           ${food.name} Amount:  ${foodId.amountBought}<br>
            
            </c:if>
         </c:forEach>
