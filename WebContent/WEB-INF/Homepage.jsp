@@ -6,6 +6,7 @@
 <head>
 <style><%@include file="/WEB-INF/index.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <title>Iron Grub | Clean, Fast, Easy.</title>
 </head>
 <body>

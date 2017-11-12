@@ -53,7 +53,8 @@ public class CheckOut extends HttpServlet {
 		// System.out.println(pickFood.getId()); // for Large, 0 for Regular
 		String PaymentInformation = String.valueOf(request.getParameter("PaymentInformation"));
 		String CreditCardNumber = String.valueOf(request.getParameter("CreditCardNumber"));
-		String CardSecurityCode = String.valueOf(request.getParameter("CardSecurityCode"));				String address = String.valueOf(request.getParameter("Address")); // New address
+		String CardSecurityCode = String.valueOf(request.getParameter("CardSecurityCode"));				
+		String address = String.valueOf(request.getParameter("Address")); // New address
 		String name = String.valueOf(request.getParameter("fName"));// New User name;
 		Date date = new Date();
 		String orderedDate = date.toString();
