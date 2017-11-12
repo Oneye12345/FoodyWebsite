@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<style><%@include file="/WEB-INF/index.css"%></style>
+<style><%@include file="/WEB-INF/navBar.css"%></style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,13 +15,12 @@
 <body>
 
 
-	<div class="topnav">
-
-		<a class="active" href="Homepage"><span>IRON GRUB</span>Home</a> 
-		<a href="CheckOrder">CheckOrder</a> 
-		<a href="Introduction">About Us</a>
+<div class="topnav" id="myTopnav">
+ 		 <a class="active" href="Homepage"><span>IRON GRUB</span> Home</a> 
+  		<a href="CheckOrder">CheckOrder</a> 
+  		<a href="Introduction">About Us</a>
+  		<a href="#contact">Contact</a>
 	</div>
-
 
 
 	<div class="container">
@@ -95,5 +94,5 @@
 			</div>
 
 </body>
-<div class= "text-center">&copy; 2017 Iron Grub Inc., All Rights Reserved</div>
+<footer><p style=" bottom: 0; width:100%; text-align: center">&copy; 2017 Iron Grub Inc., All Rights Reserved</p></footer>
 </html>

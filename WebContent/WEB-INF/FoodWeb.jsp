@@ -103,7 +103,7 @@
 
 </body>
 
-<div class= "text-center">&copy; 2017 Iron Grub Inc., All Rights Reserved</div>
+<footer><p style="position: fixed; bottom: 0; width:100%; text-align: center">&copy; 2017 Iron Grub Inc., All Rights Reserved</p></footer>
 
 </html>
 
