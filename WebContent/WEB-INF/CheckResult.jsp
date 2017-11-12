@@ -9,9 +9,13 @@
 <body>
 	
 	You Have Order: <br>
-	<c:forEach items="${listBFood}" var="listBFood">
-	<img src="${listBFood.foods.image}"><h3>${listBFood.foods.name}</h3> <br>
-	Amount: ${listBFood.amount} <br>
+	<c:forEach items="${listFood}" var="food" varStatus="rowStatus">
+        <c:forEach items="${listBFood}" var="foodId" varStatus="rowCount">
+           <c:if test = "${food.id == foodId.id}">
+           ${food.name} Amount:  ${foodId.amountBought}<br>
+           
+           </c:if>
+        </c:forEach>
     </c:forEach>
 	
 

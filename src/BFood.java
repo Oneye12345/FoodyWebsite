@@ -1,26 +1,24 @@
-import java.util.List;
 
-public class BFood {
-  Food foods;
-  int amount;
-  public BFood(Food foods , int amount) {
-	  this.foods = foods;
-	  this.amount = amount;
-  }
-public Food getFoods() {
-	return foods;
-}
-public void setFoods(Food foods) {
-	this.foods = foods;
-}
-public int getAmount() {
-	return amount;
-}
-public void setAmount(int amount) {
-	this.amount = amount;
-}
-public String toString() {
-	String output = foods.toString() + amount;
-	return output;
-}
+public class BFood{
+	int id;
+	int amountBought;
+	public BFood(int id , int amountBought) {
+		this.id =id;
+		this.amountBought = amountBought;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getAmountBought() {
+		return amountBought;
+	}
+	public void setAmountBought(int amountBought) {
+		this.amountBought = amountBought;
+	}
+	public String toString() {
+		return id + " " + amountBought;
+	}
 }
