@@ -16,7 +16,7 @@
  		 <a class="active" href="Homepage"><span>IRON GRUB</span> Home</a> 
   		<a href="CheckOrder">CheckOrder</a> 
   		<a href="Introduction">About Us</a>
-  		<a href="#contact">Contact</a>
+  		
 	</div>
 
 	<div class="container">
@@ -24,27 +24,29 @@
 		<div class="row">
 
 			<div class=page-header>
-				<h1><font color="orange" size="7"><center> Continue to Checkout</center></font></h1>
+			<p style= "text-align: left"><img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '80' height='80'>
+				<font color="#FF7D33" size="5" >Continue to Checkout</font> </p>
+			
 			</div>
 
 			<div class="col-sm-4">
 
 				<div class="img">
 					<a href="FoodWeb?id=${pickFood.id}"> <img
-						src="${pickFood.image}" width="180" height="180"></a>
+						src="${pickFood.image}" width="320" height="320"></a>
 				</div>
 			</div>
 			
 			<div class="col-sm-6">
 				<br> <br>
-				<label class="control-lable"> <b><font color="orange" size="5" >${pickFood.name}</font></b> </label> <br>
-				<label class="control-lable"> <font color="#333333" face="sans-serif">${pickFood.description}</font></label> <br>
-				<label class="control-lable"> <font color="#333333">$ ${pickFood.price} </font></label> <br>
+				 <p><font color="#FF7D33" size="5" >${pickFood.name}</font></p>
+				<font  face="Time New Roman" size="4">${pickFood.description}</font> <br>
+				<font face="Time New Roman" size="4">$ ${pickFood.price} </font> <br>
 			</div>
 			
 			</div>
 			
-				<br><br><label class="control-lable"> <b><font color="#333333">OTHER Options: </font></b></label>
+				<br><br><label class="control-lable"> <b><font color="#333333" face="Time New Roman" size="4">OTHER Options: </font></b></label>
 
 				<c:choose>
 					<c:when test="${pickFood.size}">
@@ -54,22 +56,22 @@
 									<c:when test="${serving.size=='large'}">
 
 										<div>
-											<br><label class="control-lable"> <b>Size: Large Total Calories =
-												${serving.calories} </b><br><br> <b>Protein:</b> ${serving.protein}g | |
+											<br> <font color="#333333" face="Time New Roman" size="4"><b>Size: Large Total Calories =</b>
+												${serving.calories}g <br><br> <b>Protein:</b> ${serving.protein}g | |
 												<b>Carbs:</b> ${serving.carbs}g | | <b>Fat:</b> ${serving.fat}g | | <b>Size:</b>
-												Large +$2 <input type="radio" name="Size" value="2"
+												Large +$2 </font><input type="radio" name="Size" value="2"
 												checked="checked">
-											</label>
+											
 										</div>
 
 									</c:when>
 									<c:otherwise>
 										<div>
-											<br><label class="control-lable">  <b>Size: Regular Total Calories =
-												${serving.calories} </b><br><br> <b>Protein:</b> ${serving.protein}g | |
+											<br> <font color="#333333" face="Time New Roman" size="4"> <b>Size: Regular Total Calories =</b>
+												${serving.calories}g <br><br> <b>Protein:</b> ${serving.protein}g | |
 												<b>Carbs:</b> ${serving.carbs}g | | <b>Fat:</b> ${serving.fat}g | | <b>Size:</b>
-												Regular +$0 <input type="radio" name="Size" value="0">
-											</label>
+												Regular +$0 </font><input type="radio" name="Size" value="0">
+											
 										</div>
 									</c:otherwise>
 								</c:choose>
@@ -82,16 +84,16 @@
 						<form action='CheckOut' method='get'>
 							<c:forEach items="${pickServings}" var="serving">
 								<div>
-									<br><label class="control-lable"> <b>Size: Regular Total Calories =
-												${serving.calories} </b><br><br> <b>Protein:</b> ${serving.protein}g | |
+									<br><font color="#333333" face="Time New Roman" size="4"> <b>Size: Regular Total Calories =</b>
+												${serving.calories}g <br><br> <b>Protein:</b> ${serving.protein}g | |
 												<b>Carbs:</b> ${serving.carbs}g | | <b>Fat:</b> ${serving.fat}g | | <b>Size:</b>
-												Regular +$0 <input type="radio" name="Size" value="0" checked="checked">
-									</label>
+												Regular +$0</font> <input type="radio" name="Size" value="0" checked="checked">
+								
 								</div>
 							</c:forEach>
 
 							<div class="form-group row ">
-							 <label class="col-sm-1 col-form-label"><input type="submit" value="Check Out"></label>
+							 <p><input type="submit" value="Check Out"></p>
 							</div>
 						</form>
 						<br />
@@ -103,7 +105,16 @@
 
 </body>
 
-<footer><p style="position: fixed; bottom: 0; width:100%; text-align: center">&copy; 2017 Iron Grub Inc., All Rights Reserved</p></footer>
+<footer>
+<div class = "footer"><p><span style="float:left;">
+<img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '70' height='70'>
+&copy; 2017 Iron Grub Inc., All Rights Reserved</span>
+
+<span style="float:right;"><img src = "https://sassets.evoice.com/evoiceImages/contact_sales.png" width= '15' height='15'/> &nbsp;323-555-5787
+<br> <img src = 'https://n6-img-fp.akamaized.net/free-icon/email-envelope-outline-shape-with-rounded-corners_318-49938.jpg?size=338&ext=jpg' width= '15' height='15'/> &nbsp;info@irongrub.com
+<br><img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Building_font_awesome.svg/2000px-Building_font_awesome.svg.png' width='15' height = '15'/> 5151 State University Dr, 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los Angeles, CA 90032</span></p></div>
+</footer>
 
 </html>
 
