@@ -1,5 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,10 +7,11 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Check Result</title>
+<title>Confirm Order</title>
 </head>
-<body>
-		<div class="topnav">
+
+<body> 
+	<div class="topnav">
 <a href="Introduction">ABOUT US</a>
   <a href="CheckOrder">MY ORDER</a>
   <a class="active" href="Homepage">SHOP</a>
@@ -38,26 +38,51 @@
 				</p>
 			
 		</div>
-		</div>
-	<p><font size="5">Your Previous order: ${orderedEmail}</font></p> <br>
-	<p><font size="5">
-	<c:forEach items="${listFood}" var="food" varStatus="rowStatus">
-        <c:forEach items="${listBFood}" var="foodId" varStatus="rowCount">
-           <c:if test = "${food.id == foodId.id}">
-           
-         <br>  ${food.name} Amount:  ${foodId.amountBought}<br>
-           
-           </c:if>
-        </c:forEach>
-    </c:forEach>
-    </font></p>
+		<div class="col-sm-4">
+
+				<div class="img">
+					<a href="FoodWeb?id=${pickFood.id}"> <img src=${pickFood.image} width= '320' height='320'> <br>
+</a>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<br> <br>
+				 <p><font  size="6">You have Ordered:<br> ${pickFood.name}</font></p>
+				<font  size="4">${pickFood.description}</font> <br>
+				
+			</div>
+			</div>
+  <br>
+  <br> 
+  
+  <div class="form-group row">
+							<label class="col-form-label"> <font color="black" size="3" face="Time New Roman"><b> Address : ${address}<br></b></font></label>
+							
+							</div>
+<div class="form-group row">
+<label class="col-form-label"> <font color="black" size="3" face="Time New Roman"><b>  Your name : ${personName}<br></b></font></label>
 </div>
-
-
+<div class="form-group row">
+<label class="col-form-label"> <font color="black" size="3" face="Time New Roman"><b>   Ordered Date : ${orderedDate} <br></b></font></label>
+</div>
+<div class="form-group row">
+<label class="col-form-label"> <font color="black" size="3" face="Time New Roman"><b>    Credit Card Num : ${confirmCardNum}<br></b></font></label>
+</div>
+<div class="form-group row">
+<label class="col-form-label"> <font color="black" size="3" face="Time New Roman"><b>     Credit Card Type : ${cCardType}<br></b></font></label>
+</div>
+<div class="form-group row">
+<label class="col-form-label"> <font color="black" size="3" face="Time New Roman"><b>      Your Food will be arriving at your door in 2 days, 12pm - 5 pm <br></b></font></label>
+</div>
+ <br>
+ 
+ <a href = "Homepage">Back to Home</a>
+ 
+ </div>
+ 
 </body>
+
 <footer>
-<br>
-<br>
 <div class = "footer"><p><span style="float:left;">
 <br>
 &copy; 2017 Iron Grub Inc., All Rights Reserved</span>
@@ -67,4 +92,5 @@
 <br><img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Building_font_awesome.svg/2000px-Building_font_awesome.svg.png' width='15' height = '15'/> 5151 State University Dr, 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los Angeles, CA 90032</span></p></div>
 </footer>
+
 </html>
