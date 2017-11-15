@@ -1,10 +1,17 @@
-
 public class BoughtFood {
 	int Id;
 	int buyerId;
-	public BoughtFood(int Id, int buyerId) {
+	boolean isNormal;
+	public BoughtFood(int Id, int buyerId, boolean isNormal) {
+		this.isNormal = isNormal;
 		this.Id = Id;
 		this.buyerId = buyerId;
+	}
+	public boolean isNormal() {
+		return isNormal;
+	}
+	public void setNormal(boolean isNormal) {
+		this.isNormal = isNormal;
 	}
 	public int getId() {
 		return Id;
@@ -23,4 +30,3 @@ public class BoughtFood {
 		return output;
 	}
 }
-

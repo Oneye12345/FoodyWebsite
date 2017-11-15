@@ -16,8 +16,7 @@
   <a class="active" href="Homepage">SHOP</a>
 </div>
 <div class = "container2"><img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '130' height='120'></div>
-<div class="align-right2"> <br><h3>CLEAN, FAST, EASY.</h3>
-<br>Chef-Crafted | Cooked from scratch | All-natural</div>
+<div class="align-right2"> <br><h3>CLEAN, FAST, EASY.</h3></div>
 <h1>SHOP</h1>
 <br>
 <div class = "container2"><h3>Iron Grub</h3></div>
@@ -51,7 +50,7 @@
     <c:if test="${rowCounter.count % 4 == 1}">
       <tr>
     </c:if>
-    <td><center><div class="img"><a href="FoodWeb?id=${listFood.id}"> <img src="${listFood.image}" width = "180" height = "180"></a></div>
+    <td><center><div class="img"><a href="FoodWeb?id=${listFood.id}"> <img src="${listFood.image}" width = "200" height = "200"></a></div>
 			<br><a style= "text-transform: uppercase; font-size: 12px; text-decoration: none; color: #696969"; href="FoodWeb?id=${listFood.id}">${listFood.name}</a>
     			<br><font size: 12px; color="green">$${listFood.price}</font>
     			<br><a href="FoodWeb?id=${listFood.id}"><button class="button" type="button">Buy Now</button></a></center><br></td>
@@ -63,7 +62,7 @@
 
 <footer>
 <div class = "footer"><p><span style="float:left;">
-<img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '70' height='70'>
+<br>
 <br>&copy; 2017 Iron Grub Inc., All Rights Reserved</span>
 
 <span style="float:right;"><img src = "https://sassets.evoice.com/evoiceImages/contact_sales.png" width= '15' height='15'/> &nbsp;323-555-5787

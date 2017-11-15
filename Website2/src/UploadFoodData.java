@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,16 +6,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class CheckOrder
+ * Servlet implementation class UploadFoodData
  */
-@WebServlet("/CheckOrder")
-public class CheckOrder extends HttpServlet {
+@WebServlet("/UploadFoodData")
+public class UploadFoodData extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CheckOrder() {
+    public UploadFoodData() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,8 +25,7 @@ public class CheckOrder extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		request.getRequestDispatcher("/WEB-INF/CheckOrder.jsp").forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -35,10 +33,7 @@ public class CheckOrder extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String UserOrdered = request.getParameter( "username" );
-	
-		getServletContext().setAttribute("UserOrdered", UserOrdered);
-		response.sendRedirect("CheckResult");
+		doGet(request, response);
 	}
 
 }

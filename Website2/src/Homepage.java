@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -34,7 +35,7 @@ public class Homepage extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		
 		List<Food> listFood = new ArrayList<Food>();
 		List<Users> listUsers = new ArrayList<Users>();
 		List<BoughtFood> listBought = new ArrayList<BoughtFood>();
@@ -125,7 +126,7 @@ public class Homepage extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("SELECT * from boughtFood;");
 
 			while (rs.next()) {
-				listBought.add(new BoughtFood(rs.getInt("Id"), rs.getInt("userId")));
+				listBought.add(new BoughtFood(rs.getInt("Id"), rs.getInt("userId"), rs.getBoolean("isNormal")));
 			}
 
 			c2.close();
