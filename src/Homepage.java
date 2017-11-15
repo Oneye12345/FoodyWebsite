@@ -91,7 +91,7 @@ public class Homepage extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("SELECT * from Users;");
 
 			while (rs.next()) {
-				listUsers.add(new Users(rs.getInt("Id"), rs.getString("Name")));
+				listUsers.add(new Users(rs.getInt("Id"), rs.getString("Name"), rs.getString("eMail"), rs.getString("address")));
 			}
 
 			c1.close();

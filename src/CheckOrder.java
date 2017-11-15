@@ -36,9 +36,9 @@ public class CheckOrder extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String UserOrdered = request.getParameter( "username" );
+		String orderedEmail = request.getParameter( "orderedEmail" );
 	
-		getServletContext().setAttribute("UserOrdered", UserOrdered);
+		getServletContext().setAttribute("orderedEmail", orderedEmail);
 		response.sendRedirect("CheckResult");
 	}
 

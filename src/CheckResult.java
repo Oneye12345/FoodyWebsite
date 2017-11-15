@@ -34,11 +34,11 @@ public class CheckResult extends HttpServlet {
 		List<Users> listUsers = (List<Users>) getServletContext().getAttribute("listUsers");
 		List<Food> listFood = (List<Food>) getServletContext().getAttribute("listFood");
 		
-		String UserOrdered = (String) getServletContext().getAttribute("UserOrdered");
+		String orderedEmail = (String) getServletContext().getAttribute("orderedEmail");
 	    List<Integer> boughtFoodId = new ArrayList<Integer>();
 		//System.out.println(str);
 		for(int i=0;i<listUsers.size();i++) {
-			if(listUsers.get(i).getName().equals(UserOrdered)) {
+			if(listUsers.get(i).geteMail().equals(orderedEmail)) {
 				for(int j=0;j<listBought.size();j++) {
 					if(listBought.get(j).getBuyerId()==listUsers.get(i).getId()) {
 						boughtFoodId.add(listBought.get(j).getId());

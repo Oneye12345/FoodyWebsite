@@ -6,12 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 ${pickFood.image} <br>
  You have Ordered  : ${pickFood.name} <br> 
  Address : ${address}<br>
  Your name : ${personName}<br>
  Ordered Date : ${orderedDate} <br>
+ Credit Card Num : ${confirmCardNum}<br>
+ Credit Card Type : ${cCardType}<br>
+ 
  Your Food will be arriving at your door in 2 days, 12pm - 5 pm <br>
  <br>
  <a href = "Homepage">Back to Home</a>

@@ -48,6 +48,9 @@
 					
 					  	<c:if test = "${isEmptyAlert==false}">
   					    <h5><font color="red">Please fill out all information.</font></h5>
+   					    </c:if><br>
+   					    <c:if test = "${isCreditValid==false}">
+   					    <h5><font color="red">Invalid Credit Card Information</font></h5>
    					    </c:if>
    					    
    					    <div class="form-group row">
@@ -59,14 +62,14 @@
 						</div>
 						    
 						<div class="form-group row">
-							<label class="col-sm-1 col-form-label"> <font color="black"><b>Payment information:</b></font> </label>
+							<label class="col-sm-1 col-form-label"> <font color="black"><b>Name on Credit Card:</b></font> </label>
 							<div class="col-sm-5">
 							<input class="form-control" type="text" name="PaymentInformation"> <br> 
 							</div>
 						</div>
 				
 						<div class="form-group row">
-							<label class="col-sm-1 col-form-label"> <font color="black"><b>Credit Card Number:</b></font></label> 
+							<label class="col-sm-1 col-form-label"> <font color="black"><b>Credit Card Number:</b></font></label>  
 							<div class="col-sm-5">
 							<input class="form-control" type="text" name="CreditCardNumber"><br> 
 							</div>
@@ -80,9 +83,15 @@
 						</div>
 						
 						<div class="form-group row">
-							<label class="col-sm-1 col-form-label"> <font color="black"><b>Name (First name):</b></font></label> 
+							<label class="col-sm-1 col-form-label"> <font color="black"><b>Name:</b></font></label> 
 							<div class="col-sm-5">
 							<input class="form-control" type="text" name="fName"><br> 
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-1 col-form-label"> <font color="black"><b>Email:</b></font></label> 
+							<div class="col-sm-5">
+							<input class="form-control" type="text" name="eMail"><br> 
 							</div>
 						</div>
 						

@@ -8,10 +8,11 @@
 </head>
 <body>
 	
-	You Have Order: <br>
+	Your Previous order (${orderedEmail})): <br>
 	<c:forEach items="${listFood}" var="food" varStatus="rowStatus">
         <c:forEach items="${listBFood}" var="foodId" varStatus="rowCount">
            <c:if test = "${food.id == foodId.id}">
+           
            ${food.name} Amount:  ${foodId.amountBought}<br>
            
            </c:if>
