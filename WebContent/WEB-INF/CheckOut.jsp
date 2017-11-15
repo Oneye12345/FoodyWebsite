@@ -15,18 +15,30 @@
 <body>
 
 
-<div class="topnav" id="myTopnav">
- 		 <a class="active" href="Homepage"><span>IRON GRUB</span> Home</a> 
-  		<a href="CheckOrder">CheckOrder</a> 
-  		<a href="Introduction">About Us</a>
-  		
-	</div>
-
+<div class="topnav">
+<a href="Introduction">ABOUT US</a>
+  <a href="CheckOrder">MY ORDER</a>
+  <a class="active" href="Homepage">SHOP</a>
+</div>
 
 	<div class="container">
 
 		<div class=page-header>
-				<p><font color="#FF7D33" size="7"> <center>Welcome to Checkout</center> </font></p>
+			
+				<p>
+				<span style="text-align: left">
+					<img class="logo-img"
+						src='https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg'
+						width='80' height='80'>
+						 <font color="#FF7D33" size="5">Welcome to Checkout</font>
+						 </span>
+						 
+				<span style="float: right">
+				<font color="#FF7D33" size="5">CLEAN, FAST, EASY.</font>
+				</span>
+						
+				</p>
+			
 		</div>
 		
 		<div class="row">
@@ -41,7 +53,7 @@
 				<br>
 			
 				<div class="col-sm-6">
-					<p><font size="6">You are Ordering:</font><br>
+					<p><font size="6">You Are Ordering:</font><br>
 					 <br><font color="#FF7D33" size="6">${pickFood.name}</font></p>
 					<p> <font color="#333333" size="4">${pickFood.description}</font></p> <br>
 				 	<p><font color="#333333"  size="4"> <c:if test="${FoodSize == 2}"><b>Large Size:</b> $ ${tPrice}</c:if></font></p>
@@ -94,9 +106,12 @@
 							</div>
 						</div>
 						
+						
 					<div class="form-group row ">
+					
 					<label class="col-sm-1 col-form-label">
-					<button type="submit" class="btn" value="Confirm Order" style="background-color: #D2691E; color: white">Confirm Order</button>
+					
+						<button type="submit" class="btn" value="Confirm Order" style="background-color: #D2691E; color: white">Confirm Order</button>
 						
 						</label>
 					</div>
@@ -104,6 +119,7 @@
 			</div>
 
 </body>
+
 <footer>
 <div class="footer">
 	<p>

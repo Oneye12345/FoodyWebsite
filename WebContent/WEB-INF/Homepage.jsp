@@ -22,7 +22,7 @@
 <br>
 <div class = "container2"><h3>Iron Grub</h3></div>
 <div class = "crop"><img src = 'https://mealprepempire.com/wp-content/uploads/2014/07/IMG_0323-1500x542.jpg'></div>
-<h4><center>HOW IT WORKS...</center></h4>
+<p><font size="3" face="sans-serif"><center>HOW IT WORKS...</center></font></p>
 
 <div class = "container3">
   <div class="align-left">
