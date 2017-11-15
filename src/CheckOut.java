@@ -24,10 +24,12 @@ public class CheckOut extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		boolean isEmptyAlert = true;
+		boolean isCreditValid = true;
 		Food pickFood = (Food) (getServletContext().getAttribute("pickFood")); // User's Picked Food
 		double FoodSize = Double.valueOf(request.getParameter("Size")); // $ for Food Size
 		double tPrice = FoodSize + pickFood.getPrice(); // Price of Foodsize + User's food.
 		// System.out.println("Size picked : " +tPrice);
+		getServletContext().setAttribute("isCreditValid", isCreditValid);
 		getServletContext().setAttribute("tPrice", tPrice);
 		getServletContext().setAttribute("pickFood", pickFood);
 		getServletContext().setAttribute("FoodSize", FoodSize);
@@ -108,8 +110,8 @@ public class CheckOut extends HttpServlet {
 		long cNum = 0;
 		System.out.print(CreditCardNumber);
 		if (!CreditCardNumber.equals("")) {
-			if (CreditCardNumber.contains("[a-zA-Z]+") == false) {
-		cNum = Long.parseLong(CreditCardNumber);
+			if (CreditCardNumber.matches("[0-9]+")) {
+				cNum = Long.parseLong(CreditCardNumber);
 			}
 		}
 		if (isValid(cNum)){

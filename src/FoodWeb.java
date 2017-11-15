@@ -52,6 +52,7 @@ public class FoodWeb extends HttpServlet {
 		for (int i =0 ; i < pickServings.size(); i ++) {
 			System.out.println(pickServings.get(i).toString());
 		}
+		
 		getServletContext().setAttribute("pickFood", pickFood);
 		getServletContext().setAttribute("pickServings", pickServings);
 		request.getRequestDispatcher("/WEB-INF/FoodWeb.jsp").forward(request, response);

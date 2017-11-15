@@ -33,7 +33,7 @@
 					<img class="logo-img"
 						src='https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg'
 						width='80' height='80'>
-						 <font color="#FF7D33" size="5">Check Your Order</font>
+						 <font color="#FF7D33" size="5">Check Past Order:</font>
 						 </span>
 						 
 				<span style="float: right">

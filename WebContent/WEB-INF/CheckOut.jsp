@@ -67,11 +67,12 @@
 				<form action="CheckOut" method="post">
 					
 					  	<c:if test = "${isEmptyAlert==false}">
-  					    <h5><font color="red">Please fill out all information.</font></h5>
+					  	<h5><font color="red">Please fill out all information.</font></h5>
    					    </c:if>
-					    <c:if test = "${isCreditValid==false}">
+   					    <c:if test = "${isCreditValid==false}">
    					    <h5><font color="red">Invalid Credit Card Information</font></h5>
    					    </c:if>
+					    
 
    					    
    					    <div class="form-group row">
