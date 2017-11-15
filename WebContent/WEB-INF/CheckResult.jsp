@@ -13,7 +13,7 @@
         <c:forEach items="${listBFood}" var="foodId" varStatus="rowCount">
            <c:if test = "${food.id == foodId.id}">
            
-           ${food.name} Amount:  ${foodId.amountBought}<br>
+           ${food.image}   || ${food.name} Amount:  ${foodId.amountBought}<br>
            
            </c:if>
         </c:forEach>

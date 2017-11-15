@@ -99,6 +99,7 @@ public class CheckOut extends HttpServlet {
 		if (!email.equals("")) {
 			isEmail = false;
 		}
+		CreditCardNumber = CreditCardNumber.replaceAll("\\s+","");
 		String confirmCardNum = "";
 		for (int i = 0; i < CreditCardNumber.length()-3; i ++) {
 			confirmCardNum += "*";
@@ -109,6 +110,7 @@ public class CheckOut extends HttpServlet {
 		//Validate Credit Card
 		long cNum = 0;
 		System.out.print(CreditCardNumber);
+		
 		if (!CreditCardNumber.equals("")) {
 			if (CreditCardNumber.matches("[0-9]+")) {
 				cNum = Long.parseLong(CreditCardNumber);
