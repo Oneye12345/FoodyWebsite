@@ -55,9 +55,8 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-form-label"> <font color="black"><b>First
-								Name :</b></font>
-					</label> <input type='text' name='username'><br>
+					<label class="col-form-label"> <font color="black"><b>Email :</b></font>
+					</label> <input type='text' name='orderedEmail'><br>
 				</div>
 				
 				<div class="form-group row">
