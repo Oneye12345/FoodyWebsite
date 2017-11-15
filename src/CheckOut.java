@@ -105,13 +105,19 @@ public class CheckOut extends HttpServlet {
 		
 		String cCardType = "";
 		//Validate Credit Card
-		int cNum = Integer.parseInt(CreditCardNumber);
+		long cNum = 0;
+		System.out.print(CreditCardNumber);
+		if (!CreditCardNumber.equals("")) {
+			if (CreditCardNumber.contains("[a-zA-Z]+") == false) {
+		cNum = Long.parseLong(CreditCardNumber);
+			}
+		}
 		if (isValid(cNum)){
 			System.out.println("Valid");
+			confirmCardNum+=CreditCardNumber.charAt(CreditCardNumber.length()-4);
 			confirmCardNum+=CreditCardNumber.charAt(CreditCardNumber.length()-3);
 			confirmCardNum+=CreditCardNumber.charAt(CreditCardNumber.length()-2);
 			confirmCardNum+=CreditCardNumber.charAt(CreditCardNumber.length()-1);
-			confirmCardNum+=CreditCardNumber.charAt(CreditCardNumber.length());
 			if (CreditCardNumber.charAt(0) == '4'){
 				cCardType = "Visa";
                 System.out.println("Type : VISA");

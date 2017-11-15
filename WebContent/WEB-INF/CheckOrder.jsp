@@ -20,19 +20,28 @@
 
 
 	<div class="topnav">
-
-		<a class="active" href="Homepage"><span>IRON GRUB</span>Home</a> <a
-			href="Introduction">About Us</a> <a href="#contact">Contact</a>
-	</div>
+<a href="Introduction">ABOUT US</a>
+  <a href="CheckOrder">MY ORDER</a>
+  <a class="active" href="Homepage">SHOP</a>
+</div>
 
 	<div class="container">
 
 		<div class=page-header>
-			<h1>
-				<font size="7">
-					<center>Check Your Order</center>
-				</font>
-			</h1>
+				<p>
+				<span style="text-align: left">
+					<img class="logo-img"
+						src='https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg'
+						width='80' height='80'>
+						 <font color="#FF7D33" size="5">Check Your Order</font>
+						 </span>
+						 
+				<span style="float: right">
+				<font color="#FF7D33" size="5">CLEAN, FAST, EASY.</font>
+				</span>
+						
+				</p>
+			
 		</div>
 
 		<div class="row">
@@ -46,17 +55,34 @@
 				</div>
 
 				<div class="form-group row">
-					<label class="col-form-label"> <font color="black"><b>Email Address :</b></font>
-					</label> <input type='text' name='orderedEmail'><br>
+					<label class="col-form-label"> <font color="black"><b>First
+								Name :</b></font>
+					</label> <input type='text' name='username'><br>
 				</div>
 				
 				<div class="form-group row">
-					<input type='submit' value='Check Orders'>
+					<button type="submit" class="btn" value="Check Out"
+							style="background-color: #D2691E; color: white">Check
+							Out</button>
 				</div>
 				
 			</form>
 		</div>
 	</div>
 </body>
-<footer><p style="position: fixed; bottom: 0; width:100%; text-align: center">&copy; 2017 Iron Grub Inc., All Rights Reserved</p></footer>
-</html>
+<footer>
+<div class="footer">
+	<p>
+	<br><br><br><span style="float: left;"> <br> &copy; 2017 Iron Grub Inc., All Rights
+			Reserved
+		</span> <span style="float: right;"><img
+			src="https://sassets.evoice.com/evoiceImages/contact_sales.png"
+			width='15' height='15' /> &nbsp;323-555-5787 <br> <img
+			src='https://n6-img-fp.akamaized.net/free-icon/email-envelope-outline-shape-with-rounded-corners_318-49938.jpg?size=338&ext=jpg'
+			width='15' height='15' /> &nbsp;info@irongrub.com <br> <img
+			src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Building_font_awesome.svg/2000px-Building_font_awesome.svg.png'
+			width='15' height='15' /> 5151 State University Dr, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los
+			Angeles, CA 90032</span>
+	</p>
+</div>
+</footer>

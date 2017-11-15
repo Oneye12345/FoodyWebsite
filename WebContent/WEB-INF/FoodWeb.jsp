@@ -12,12 +12,11 @@
 
 <body>
 
-	<div class="topnav" id="myTopnav">
- 		 <a class="active" href="Homepage"><span>IRON GRUB</span> Home</a> 
-  		<a href="CheckOrder">CheckOrder</a> 
-  		<a href="Introduction">About Us</a>
-  		
-	</div>
+	<div class="topnav">
+<a href="Introduction">ABOUT US</a>
+  <a href="CheckOrder">MY ORDER</a>
+  <a class="active" href="Homepage">SHOP</a>
+</div>
 
 	<div class="container">
 
@@ -25,7 +24,7 @@
 
 			<div class=page-header>
 			<p style= "text-align: left"><img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '80' height='80'>
-				<font color="#FF7D33" size="5" >Continue to Checkout</font> </p>
+				<font color="#FF7D33" size="5" >${pickFood.name}</font> </p>
 			
 			</div>
 
@@ -39,14 +38,14 @@
 			
 			<div class="col-sm-6">
 				<br> <br>
-				 <p><font color="#FF7D33" size="5" >${pickFood.name}</font></p>
-				<font  face="Time New Roman" size="4">${pickFood.description}</font> <br>
-				<font face="Time New Roman" size="4">$ ${pickFood.price} </font> <br>
+				 <p><font  size="6">Description</font></p>
+				<font  size="4">${pickFood.description}</font> <br>
+				
 			</div>
 			
 			</div>
 			
-				<br><br><label class="control-lable"> <b><font color="#333333" face="Time New Roman" size="4">OTHER Options: </font></b></label>
+				<br><br>
 
 				<c:choose>
 					<c:when test="${pickFood.size}">
@@ -56,27 +55,34 @@
 									<c:when test="${serving.size=='large'}">
 
 										<div>
-											<br> <font color="#333333" face="Time New Roman" size="4"><b>Size: Large Total Calories =</b>
-												${serving.calories}g <br><br> <b>Protein:</b> ${serving.protein}g | |
-												<b>Carbs:</b> ${serving.carbs}g | | <b>Fat:</b> ${serving.fat}g | | <b>Size:</b>
-												Large +$2 </font><input type="radio" name="Size" value="2"
-												checked="checked">
+											<font size="4"><b>Large:</b> $${pickFood.price +2} <input type="radio" name="Size" value="2"
+												checked="checked"></font><br>
+											<br><font color="#333333" size="4"><b>Calories: </b>
+												${serving.calories}g &nbsp; <b>Protein:</b> ${serving.protein}g &nbsp;
+												<b>Carbs:</b> ${serving.carbs}g &nbsp; <b>Fat:</b> ${serving.fat}g &nbsp; </font>
 											
 										</div>
 
 									</c:when>
 									<c:otherwise>
 										<div>
-											<br> <font color="#333333" face="Time New Roman" size="4"> <b>Size: Regular Total Calories =</b>
-												${serving.calories}g <br><br> <b>Protein:</b> ${serving.protein}g | |
-												<b>Carbs:</b> ${serving.carbs}g | | <b>Fat:</b> ${serving.fat}g | | <b>Size:</b>
-												Regular +$0 </font><input type="radio" name="Size" value="0">
+											<br><br><br> <font size="4"><b>Regular:</b> $${pickFood.price} <input type="radio" name="Size" value="0"
+												checked="checked"></font><br>
+											<br><font color="#333333" face="Time New Roman" size="4"><b>Calories: </b>
+												${serving.calories}g &nbsp; <b>Protein:</b> ${serving.protein}g &nbsp;
+												<b>Carbs:</b> ${serving.carbs}g &nbsp; <b>Fat:</b> ${serving.fat}g &nbsp; </font>
 											
 										</div>
 									</c:otherwise>
 								</c:choose>
 							</c:forEach>
-							<input type='submit' value='Check Out'>
+							<div class="form-group row ">
+							<label class="col-sm-1 col-form-label">
+					
+							<br><button type="submit" class="btn" value="Confirm Order" style="background-color: #D2691E; color: white">Confirm Order</button>
+						
+						</label>
+						</div>
 						</form>
 						<br />
 					</c:when>
@@ -84,16 +90,22 @@
 						<form action='CheckOut' method='get'>
 							<c:forEach items="${pickServings}" var="serving">
 								<div>
-									<br><font color="#333333" face="Time New Roman" size="4"> <b>Size: Regular Total Calories =</b>
-												${serving.calories}g <br><br> <b>Protein:</b> ${serving.protein}g | |
-												<b>Carbs:</b> ${serving.carbs}g | | <b>Fat:</b> ${serving.fat}g | | <b>Size:</b>
-												Regular +$0</font> <input type="radio" name="Size" value="0" checked="checked">
+									<br><font size="4"><b>Regular:</b> $${pickFood.price} <input type="radio" name="Size" value="0"
+												checked="checked">
+												</font><br>
+											<br><font color="#333333" face="Time New Roman" size="4"><b>Calories: </b>
+												${serving.calories}g &nbsp; <b>Protein:</b> ${serving.protein}g &nbsp;
+												<b>Carbs:</b> ${serving.carbs}g &nbsp; <b>Fat:</b> ${serving.fat}g &nbsp; </font>
 								
 								</div>
 							</c:forEach>
 
 							<div class="form-group row ">
-							 <p><input type="submit" value="Check Out"></p>
+							 <label class="col-sm-1 col-form-label">
+					
+							<br><button type="submit" class="btn" value="Confirm Order" style="background-color: #D2691E; color: white">Confirm Order</button>
+						
+						</label>
 							</div>
 						</form>
 						<br />
@@ -107,7 +119,7 @@
 
 <footer>
 <div class = "footer"><p><span style="float:left;">
-<img class = "logo-img" src = 'https://i.pinimg.com/736x/33/04/e3/3304e35f47f81180e8c8b896b5d57332--knifes-forks.jpg' width= '70' height='70'>
+<br>
 &copy; 2017 Iron Grub Inc., All Rights Reserved</span>
 
 <span style="float:right;"><img src = "https://sassets.evoice.com/evoiceImages/contact_sales.png" width= '15' height='15'/> &nbsp;323-555-5787
